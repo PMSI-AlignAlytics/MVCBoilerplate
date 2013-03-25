@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "GuideSection";
+
+    ViewBag.CurrentNav = "Style";
+    ViewBag.UseGoogleAnalytics = false;        
+}
+
+<h2>GuideSection</h2>
+
+<ul class="mui-breadcrumbs">
+    <li><a href="Index">Style Guide</a></li>
+    <li class="ui-state-active"><a href="#">@ViewBag.SectionFriendlyName</a></li>
+</ul>
+
+
+@Html.Partial((string)ViewBag.SectionName)
+
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        prettyPrint();
+    });
+</script>

@@ -1,0 +1,11 @@
+﻿        <div class="navbar navbar-fixed-top">
+          <div class="navbar-inner">
+            <a class="brand" href="#">MVC Boilerplate</a>
+            <ul class="nav">
+                
+              <li class="@Html.AttributeEncode((ViewBag.CurrentNav == "BuiltOn") ? "active" : "")"><a href="@Url.Action("BuiltOn")">Built On</a></li>
+              <li class="@Html.AttributeEncode((ViewBag.CurrentNav == "Conventions") ? "active" : "")"><a href="@Url.Action("Conventions")">Conventions</a></li>
+              <li class="@Html.AttributeEncode((ViewBag.CurrentNav == "Style") ? "active" : "")"><a href="@Url.Action("StyleGuide")">And Style</a></li>
+            </ul>
+          </div>
+        </div>

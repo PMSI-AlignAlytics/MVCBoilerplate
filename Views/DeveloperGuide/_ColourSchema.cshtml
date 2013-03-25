@@ -1,0 +1,45 @@
+﻿<section id="dev-guide-colourschema">
+<h2>Colour Schema</h2>
+@ViewBag.SectionAnchorName
+<ul class="style-guide-colour-list ui-helper-clearfix">
+    <li class="style-guide-base-color">@@base-color</li>
+    <li class="style-guide-selection-color">@@selection-color</li>
+    <li class="style-guide-base-content-color">@@base-content-color</li>
+    <li class="style-guide-base-content-border-color">@@base-content-border-color</li>
+    <li class="style-guide-widget-header-border-color">@@widget-header-border-color</li>
+    <li class="style-guide-widget-header-background-color">@@widget-header-background-color</li>
+    <li class="style-guide-widget-header-border-color">@@widget-header-border-color</li>
+    <li class="style-guide-widget-header-background-color">@@widget-header-background-color</li>
+    <li class="style-guide-widget-default-color">@@widget-default-color</li>
+    <li class="style-guide-widget-default-border-color">@@widget-default-border-color</li>
+    <li class="style-guide-widget-default-background-color">@@widget-default-background-color</li>
+    <li class="style-guide-widget-hover-color">@@widget-hover-color</li>
+    <li class="style-guide-widget-hover-border-color">@@widget-hover-border-color</li>
+    <li class="style-guide-widget-hover-background-color">@@widget-hover-background-color</li>
+    <li class="style-guide-widget-active-color">@@widget-active-color</li>
+    <li class="style-guide-widget-active-border-color">@@widget-active-border-color</li>
+    <li class="style-guide-widget-active-background-color">@@widget-active-background-color</li>
+</ul>
+
+
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        $("ul.style-guide-colour-list>li").each(function () {
+            var $this = $(this);
+            var classList = $this.attr('class').split(/\s+/);
+            $(classList).each(function (index) {
+                var className = String(this);
+                if (className.substr(0, 11) == "style-guide") {
+                    var guideText = $this.text();
+                    $this
+                        .text("")
+                        .removeClass(className)
+                        .prepend("<div class='" + className + " style-guide-colour-swatch'></div>")
+                        .append("<ul><li class='style-guide-colour-name'>" + guideText + "</li><li class='style-guide-colour-hex'>" + $("." + className).css("background-color") + "</li></ul>")
+                    ;
+                }
+            });
+        });
+    });
+</script>
+</section>

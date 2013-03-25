@@ -1,0 +1,761 @@
+﻿<!-- Nav, Tabs, & Pills
+================================================== -->
+<section id="dev-guide-navs">
+    <div class="page-header">
+    <h1>Nav: tabs, pills, and lists</h1>
+    </div>
+
+<section class="bootstrap-section">
+    <h2>Lightweight defaults <small>Same markup, different classes</small></h2>
+    <p>All nav components here&mdash;tabs, pills, and lists&mdash;<strong>share the same base markup and styles</strong> through the <code>.nav</code> class.</p>
+
+    <h3>Basic tabs</h3>
+    <p>Take a regular <code>&lt;ul&gt;</code> of links and add <code>.nav-tabs</code>:</p>
+    <div class="bs-docs-example">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+    </ul>
+    </div>
+<pre class="prettyprint">
+&lt;ul class="nav nav-tabs"&gt;
+&lt;li class="active"&gt;
+&lt;a href="#"&gt;Home&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+    <h3>Basic pills</h3>
+    <p>Take that same HTML, but use <code>.nav-pills</code> instead:</p>
+    <div class="bs-docs-example">
+    <ul class="nav nav-pills">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+    </ul>
+    </div>
+<pre class="prettyprint">
+&lt;ul class="nav nav-pills"&gt;
+&lt;li class="active"&gt;
+&lt;a href="#"&gt;Home&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;...&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+    <h3>Disabled state</h3>
+    <p>For any nav component (tabs, pills, or list), add <code>.disabled</code> for <strong>gray links and no hover effects</strong>. Links will remain clickable, however, unless you remove the <code>href</code> attribute. Alternatively, you could implement custom JavaScript to prevent those clicks.</p>
+    <div class="bs-docs-example">
+    <ul class="nav nav-pills">
+        <li><a href="#">Clickable link</a></li>
+        <li><a href="#">Clickable link</a></li>
+        <li class="disabled"><a href="#">Disabled link</a></li>
+    </ul>
+    </div>
+<pre class="prettyprint">
+&lt;ul class="nav nav-pills"&gt;
+...
+&lt;li class="disabled"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+...
+&lt;/ul&gt;
+</pre>
+
+    <h3>Component alignment</h3>
+    <p>To align nav links, use the <code>.pull-left</code> or <code>.pull-right</code> utility classes. Both classes will add a CSS float in the specified direction.</p>
+
+
+    <hr class="bs-docs-separator">
+
+
+    <h2>Stackable</h2>
+    <p>As tabs and pills are horizontal by default, just add a second class, <code>.nav-stacked</code>, to make them appear vertically stacked.</p>
+
+    <h3>Stacked tabs</h3>
+    <div class="bs-docs-example">
+    <ul class="nav nav-tabs nav-stacked">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+    </ul>
+    </div>
+<pre class="prettyprint">
+&lt;ul class="nav nav-tabs nav-stacked"&gt;
+...
+&lt;/ul&gt;
+</pre>
+
+    <h3>Stacked pills</h3>
+    <div class="bs-docs-example">
+    <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Messages</a></li>
+    </ul>
+    </div>
+<pre class="prettyprint">
+&lt;ul class="nav nav-pills nav-stacked"&gt;
+...
+&lt;/ul&gt;
+</pre>
+</section>
+
+<section class="kendo-ui-section">
+<h3>Kendo UI</h3>
+
+<div id="kendoUiTabStrip">
+    <ul>
+        <li class="k-state-active">First tab</li>
+        <li>Second tab</li>
+    </ul>
+    <div>First tab content</div>
+    <div>Second tab content</div>
+</div>
+
+<a href="#showKendoUiTabsSource" class="dev-guide-show-source" onclick="showSource('#tabsKendoUiSource')">show source</a>
+<a href="http://docs.kendoui.com/getting-started/web/tabstrip/overview" class="dev-guide-show-site">Kendo UI TabStrip Overview</a>
+
+<div id="tabsKendoUiSource" class="ui-helper-hidden style-guide-code-block">
+<pre class="prettyprint">
+    &lt;div id=&quot;tabStrip&quot;&gt;
+        &lt;ul&gt;
+            &lt;li class="k-state-active"&gt;First tab&lt;/li&gt;
+            &lt;li&gt;Second tab&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div&gt;First tab content&lt;/div&gt;
+        &lt;div&gt;Second tab content&lt;/div&gt;
+    &lt;/div&gt;
+</pre>
+
+<pre class="prettyprint">
+    $(document).ready(function() {
+        $("#tabStrip").kendoTabStrip();
+    });
+</pre>
+</div>
+</section>
+
+<section class="jquery-ui-section">
+<h3>jQuery UI</h3>
+
+<div id="jQueryUiTabs">
+    <ul>
+        <li><a href="#tabs-1">Nunc tincidunt</a></li>
+        <li><a href="#tabs-2">Proin dolor</a></li>
+        <li><a href="#tabs-3">Aenean lacinia</a></li>
+    </ul>
+    <div id="tabs-1">
+        <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+    </div>
+    <div id="tabs-2">
+        <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+    </div>
+    <div id="tabs-3">
+        <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+        <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+    </div>
+</div>
+
+
+<a  href="#showTabsJQueryUiSource" class="dev-guide-show-source" onclick="showSource('#tabsJQueryUiSource')">show source</a>
+<a href="http://jqueryui.com/tabs/" class="dev-guide-show-site">jQuery UI Tabs Overview</a>
+
+<div id="tabsJQueryUiSource" class="ui-helper-hidden style-guide-code-block">
+<pre class="prettyprint">
+&lt;div id=&quot;tabs&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#tabs-1&quot;&gt;Nunc tincidunt&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#tabs-2&quot;&gt;Proin dolor&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#tabs-3&quot;&gt;Aenean lacinia&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div id=&quot;tabs-1&quot;&gt;
+        &lt;p&gt;Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tabs-2&quot;&gt;
+        &lt;p&gt;Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tabs-3&quot;&gt;
+        &lt;p&gt;Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.&lt;/p&gt;
+        &lt;p&gt;Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<pre class="prettyprint">
+    $(function() {
+        $( "#tabs" ).tabs();
+    });
+</pre>
+</div>
+</section>
+
+<section class="telerik-section">
+<h3>Telerik Extensions for ASP.NET MVC</h3>
+
+<div id="tabsTelerikUiSource">
+<div class="t-widget t-tabstrip t-header" id="TabStrip">
+    <ul class="t-reset t-tabstrip-items">
+        <li class="t-item t-state-default t-state-active"><a class="t-link" href="#TabStrip-1">ASP.NET MVC</a></li>
+        <li class="t-item t-state-default"><a class="t-link" href="#TabStrip-2">Silverlight</a></li>
+        <li class="t-item t-state-default"><a class="t-link" href="#TabStrip-3">ASP.NET AJAX</a></li>
+        <li class="t-item t-state-default"><a class="t-link" href="#TabStrip-4">OpenAccess ORM</a></li>
+        <li class="t-item t-state-default"><a class="t-link" href="#TabStrip-5">Reporting</a></li>
+        <li class="t-item t-state-default"><a class="t-link" href="#TabStrip-6">Sitefinity ASP.NET CMS</a></li>
+    </ul>
+<div class="t-content t-state-active" id="TabStrip-1" style="display:block">
+        <ul>
+            <li>Pure ASP.NET MVC components</li>
+            <li>Completely Open Source</li>
+            <li>Exceptional Performance</li>
+            <li>Based on jQuery</li>
+            <li>Search Engine Optimized</li>
+            <li>Cross-browser support</li>
+        </ul>
+    </div><div class="t-content" id="TabStrip-2">
+        <ul>
+            <li>Built on Silverlight 3</li>
+            <li>RIA services support</li>
+            <li>Validation support</li>
+            <li>Out of browser support</li>
+            <li>The first commercial 3D chart</li>
+            <li>Free testing framework</li>
+        </ul>
+    </div><div class="t-content" id="TabStrip-3">
+        <ul>
+            <li>Built on top of Microsoft ASP.NET AJAX framework</li>
+            <li>Rich client-side capabilities; nearly identical client-side and server-side APIs</li>
+            <li>.NET 3.5 built-in support for LINQ, EntityDataSource, ADO.NET DataServices, WCF, etc</li>
+            <li>Performance optimization helper controls and HTTP compression</li>
+            <li>SharePoint and DotNetNuke Integration; ASP.NET MVC-ready</li>
+            <li>Wide cross-browser compatible and XHTML compliant</li>
+        </ul>
+    </div><div class="t-content" id="TabStrip-4">
+        <ul>
+            <li>Model First and Schema First approaches</li>
+            <li>Stored Procedures for Multiple Databases</li>
+            <li>Views for Multiple Databases</li>
+            <li>Generic Metadata Access and artificial fields API in the runtime</li>
+            <li>Support for Ado.Net Data Services and WCF</li>
+            <li>Support for LINQ, OQL, and SQL Languages</li>
+        </ul>
+    </div><div class="t-content" id="TabStrip-5">
+        <ul>
+            <li>Excellent data presentation and analysis: Crosstabs, Charts, Tables, Lists</li>
+            <li>SubReports, Barcodes, Images, Shapes, and more</li>
+            <li>Revolutionary WYSIWYG design surface in Visual Studio</li>
+            <li>Easy conditional formatting, sorting, filtering, grouping</li>
+            <li>Powerful styling, data binging and data processing models</li>
+            <li>Significantly reduced development time through wizards and builders</li>
+        </ul>
+    </div><div class="t-content" id="TabStrip-6">
+        <ul>
+            <li>Multi-lingual Content Integration</li>
+            <li>Workflow Engine</li>
+            <li>Document versioning</li>
+            <li>Permissions</li>
+            <li>Interface Localization</li>
+            <li>Wide cross-browser compatible and XHTML compliant</li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<a href="http://www.telerik.com/help/aspnet-mvc/telerik-ui-components-tabstrip-introduction.html" class="dev-guide-show-site">Telerik ASP.NET MVC TabStrip</a>
+</section>
+
+<script>
+    $(function () {
+        $("#jQueryUiTabs").tabs();
+        $("#kendoUiTabStrip").kendoTabStrip();
+    });
+</script>
+
+
+    <hr class="bs-docs-separator">
+
+<section class="bootstrap-section">
+    <h2>Dropdowns</h2>
+    <p>Add dropdown menus with a little extra HTML and the <a href="./javascript.html#dropdowns">dropdowns JavaScript plugin</a>.</p>
+
+    <h3>Tabs with dropdowns</h3>
+    <div class="bs-docs-example">
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Help</a></li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+        </li>
+    </ul>
+    </div>
+<pre class="prettyprint">
+&lt;ul class="nav nav-tabs"&gt;
+&lt;li class="dropdown"&gt;
+&lt;a class="dropdown-toggle"
+data-toggle="dropdown"
+href="#"&gt;
+Dropdown
+&lt;b class="caret"&gt;&lt;/b&gt;
+&lt;/a&gt;
+&lt;ul class="dropdown-menu"&gt;
+&lt;!-- links --&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+    <h3>Pills with dropdowns</h3>
+    <div class="bs-docs-example">
+    <ul class="nav nav-pills">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Help</a></li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+        </li>
+    </ul>
+    </div>
+<pre class="prettyprint">
+&lt;ul class="nav nav-pills"&gt;
+&lt;li class="dropdown"&gt;
+&lt;a class="dropdown-toggle"
+data-toggle="dropdown"
+href="#"&gt;
+Dropdown
+&lt;b class="caret"&gt;&lt;/b&gt;
+&lt;/a&gt;
+&lt;ul class="dropdown-menu"&gt;
+&lt;!-- links --&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+
+    <hr class="bs-docs-separator">
+
+
+    <h2>Nav lists</h2>
+    <p>A simple and easy way to build groups of nav links with optional headers. They're best used in sidebars like the Finder in OS X.</p>
+
+    <h3>Example nav list</h3>
+    <p>Take a list of links and add <code>class="nav nav-list"</code>:</p>
+    <div class="bs-docs-example">
+    <div class="well" style="max-width: 340px; padding: 8px 0;">
+        <ul class="nav nav-list">
+        <li class="nav-header">List header</li>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li><a href="#">Applications</a></li>
+        <li class="nav-header">Another list header</li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Help</a></li>
+        </ul>
+    </div> <!-- /well -->
+    </div>
+<pre class="prettyprint">
+&lt;ul class="nav nav-list"&gt;
+&lt;li class="nav-header"&gt;List header&lt;/li&gt;
+&lt;li class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Library&lt;/a&gt;&lt;/li&gt;
+...
+&lt;/ul&gt;
+</pre>
+    <p>
+    <span class="label label-info">Note</span>
+    For nesting within a nav list, include <code>class="nav nav-list"</code> on any nested <code>&lt;ul&gt;</code>.
+    </p>
+
+    <h3>Horizontal dividers</h3>
+    <p>Add a horizontal divider by creating an empty list item with the class <code>.divider</code>, like so:</p>
+<pre class="prettyprint">
+&lt;ul class="nav nav-list"&gt;
+...
+&lt;li class="divider"&gt;&lt;/li&gt;
+...
+&lt;/ul&gt;
+</pre>
+
+
+    <hr class="bs-docs-separator">
+
+
+    <h2>Tabbable nav</h2>
+    <p>Bring your tabs to life with a simple plugin to toggle between content via tabs. Bootstrap integrates tabbable tabs in four styles: top (default), right, bottom, and left.</p>
+
+    <h3>Tabbable example</h3>
+    <p>To make tabs tabbable, create a <code>.tab-pane</code> with unique ID for every tab and wrap them in <code>.tab-content</code>.</p>
+    <div class="bs-docs-example">
+    <div class="tabbable" style="margin-bottom: 18px;">
+        <ul class="nav nav-tabs">
+        <li class="active"><a href="#tab1" data-toggle="tab">Section 1</a></li>
+        <li><a href="#tab2" data-toggle="tab">Section 2</a></li>
+        <li><a href="#tab3" data-toggle="tab">Section 3</a></li>
+        </ul>
+        <div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
+        <div class="tab-pane active" id="tab1">
+            <p>I'm in Section 1.</p>
+        </div>
+        <div class="tab-pane" id="tab2">
+            <p>Howdy, I'm in Section 2.</p>
+        </div>
+        <div class="tab-pane" id="tab3">
+            <p>What up girl, this is Section 3.</p>
+        </div>
+        </div>
+    </div> <!-- /tabbable -->
+    </div>
+<pre class="prettyprint">
+&lt;div class="tabbable"&gt; &lt;!-- Only required for left/right tabs --&gt;
+&lt;ul class="nav nav-tabs"&gt;
+&lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="tab-content"&gt;
+&lt;div class="tab-pane active" id="tab1"&gt;
+&lt;p&gt;I'm in Section 1.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="tab-pane" id="tab2"&gt;
+&lt;p&gt;Howdy, I'm in Section 2.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+    <h4>Fade in tabs</h4>
+    <p>To make tabs fade in, add <code>.fade</code> to each <code>.tab-pane</code>.</p>
+
+    <h4>Requires jQuery plugin</h4>
+    <p>All tabbable tabs are powered by our lightweight jQuery plugin. Read more about how to bring tabbable tabs to life <a href="./javascript.html#tabs">on the JavaScript docs page</a>.</p>
+
+    <h3>Tabbable in any direction</h3>
+
+    <h4>Tabs on the bottom</h4>
+    <p>Flip the order of the HTML and add a class to put tabs on the bottom.</p>
+    <div class="bs-docs-example">
+    <div class="tabbable tabs-below">
+        <div class="tab-content">
+        <div class="tab-pane active" id="A">
+            <p>I'm in Section A.</p>
+        </div>
+        <div class="tab-pane" id="B">
+            <p>Howdy, I'm in Section B.</p>
+        </div>
+        <div class="tab-pane" id="C">
+            <p>What up girl, this is Section C.</p>
+        </div>
+        </div>
+        <ul class="nav nav-tabs">
+        <li class="active"><a href="#A" data-toggle="tab">Section 1</a></li>
+        <li><a href="#B" data-toggle="tab">Section 2</a></li>
+        <li><a href="#C" data-toggle="tab">Section 3</a></li>
+        </ul>
+    </div> <!-- /tabbable -->
+    </div>
+<pre class="prettyprint">
+&lt;div class="tabbable tabs-below"&gt;
+&lt;div class="tab-content"&gt;
+...
+&lt;/div&gt;
+&lt;ul class="nav nav-tabs"&gt;
+...
+&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+    <h4>Tabs on the left</h4>
+    <p>Swap the class to put tabs on the left.</p>
+    <div class="bs-docs-example">
+    <div class="tabbable tabs-left">
+        <ul class="nav nav-tabs">
+        <li class="active"><a href="#lA" data-toggle="tab">Section 1</a></li>
+        <li><a href="#lB" data-toggle="tab">Section 2</a></li>
+        <li><a href="#lC" data-toggle="tab">Section 3</a></li>
+        </ul>
+        <div class="tab-content">
+        <div class="tab-pane active" id="lA">
+            <p>I'm in Section A.</p>
+        </div>
+        <div class="tab-pane" id="lB">
+            <p>Howdy, I'm in Section B.</p>
+        </div>
+        <div class="tab-pane" id="lC">
+            <p>What up girl, this is Section C.</p>
+        </div>
+        </div>
+    </div> <!-- /tabbable -->
+    </div>
+<pre class="prettyprint">
+&lt;div class="tabbable tabs-left"&gt;
+&lt;ul class="nav nav-tabs"&gt;
+...
+&lt;/ul&gt;
+&lt;div class="tab-content"&gt;
+...
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+    <h4>Tabs on the right</h4>
+    <p>Swap the class to put tabs on the right.</p>
+    <div class="bs-docs-example">
+    <div class="tabbable tabs-right">
+        <ul class="nav nav-tabs">
+        <li class="active"><a href="#rA" data-toggle="tab">Section 1</a></li>
+        <li><a href="#rB" data-toggle="tab">Section 2</a></li>
+        <li><a href="#rC" data-toggle="tab">Section 3</a></li>
+        </ul>
+        <div class="tab-content">
+        <div class="tab-pane active" id="rA">
+            <p>I'm in Section A.</p>
+        </div>
+        <div class="tab-pane" id="rB">
+            <p>Howdy, I'm in Section B.</p>
+        </div>
+        <div class="tab-pane" id="rC">
+            <p>What up girl, this is Section C.</p>
+        </div>
+        </div>
+    </div> <!-- /tabbable -->
+    </div>
+<pre class="prettyprint">
+&lt;div class="tabbable tabs-right"&gt;
+&lt;ul class="nav nav-tabs"&gt;
+...
+&lt;/ul&gt;
+&lt;div class="tab-content"&gt;
+...
+&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+</section>
+
+<section class="jquery-ui-section">
+<h3>jQuery UI</h3>
+
+<div class="ui-helper-clearfix">
+    <h4>Vertical Menu</h4>
+    <ul id="jqueryUiVerticalMenu" style="width:200px;">
+        <li class="ui-state-disabled"><a href="#">Aberdeen</a></li>
+        <li><a href="#">Ada</a></li>
+        <li><a href="#">Adamsville</a></li>
+        <li><a href="#">Addyston</a></li>
+        <li>
+            <a href="#">Delphi</a>
+            <ul>
+                <li class="ui-state-disabled"><a href="#">Ada</a></li>
+                <li><a href="#">Saarland</a></li>
+                <li><a href="#">Salzburg</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Saarland</a></li>
+        <li>
+            <a href="#">Salzburg</a>
+            <ul>
+                <li>
+                    <a href="#">Delphi</a>
+                    <ul>
+                        <li><a href="#">Ada</a></li>
+                        <li><a href="#">Saarland</a></li>
+                        <li><a href="#">Salzburg</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Delphi</a>
+                    <ul>
+                        <li><a href="#">Ada</a></li>
+                        <li><a href="#">Saarland</a></li>
+                        <li><a href="#">Salzburg</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Perch</a></li>
+            </ul>
+        </li>
+        <li class="ui-state-disabled"><a href="#">Amesville</a></li>
+    </ul>
+</div>
+</section>
+
+<section class="mvcboilerplate-section">
+
+<div class="ui-helper-clearfix">
+    <h4>Horizontal Menu</h4>
+
+    To make a jQuery menu horizontal just add the <code>mui-horizontal-menu</code> class to it
+
+    <ul id="jqueryUiHorizontalMenu" class="mui-horizontal-menu">
+        <li class="ui-state-disabled"><a href="#">Aberdeen</a></li>
+        <li><a href="#">Ada</a></li>
+        <li><a href="#">Adamsville</a></li>
+        <li><a href="#">Addyston</a></li>
+        <li>
+            <a href="#">Delphi</a>
+            <ul>
+                <li class="ui-state-disabled"><a href="#">Ada</a></li>
+                <li><a href="#">Saarland</a></li>
+                <li><a href="#">Salzburg</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Saarland</a></li>
+        <li>
+            <a href="#">Salzburg</a>
+            <ul>
+                <li>
+                    <a href="#">Delphi</a>
+                    <ul>
+                        <li><a href="#">Ada</a></li>
+                        <li><a href="#">Saarland</a></li>
+                        <li><a href="#">Salzburg</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Delphi</a>
+                    <ul>
+                        <li><a href="#">Ada</a></li>
+                        <li><a href="#">Saarland</a></li>
+                        <li><a href="#">Salzburg</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Perch</a></li>
+            </ul>
+        </li>
+        <li class="ui-state-disabled"><a href="#">Amesville</a></li>
+    </ul>
+</div>
+</section>
+
+<section class="kendo-ui-section">
+<h3>Telerik KendoUI</h3>
+
+<ul id="kendoUIHorizontalMenu">
+    <li>
+        Products
+        <ul>
+            <li>
+                Furniture
+                <ul> <!-- moving the UL to the next line will cause an IE7 problem -->
+                    <li>Tables & Chairs</li>
+                    <li>Sofas</li>
+                    <li>Occasional Furniture</li>
+                    <li>Childerns Furniture</li>
+                    <li>Beds</li>
+                </ul>
+            </li>
+            <li>
+                Decor
+                <ul> <!-- moving the UL to the next line will cause an IE7 problem -->
+                    <li>Bed Linen</li>
+                    <li>Throws</li>
+                    <li>Curtains & Blinds</li>
+                    <li>Rugs</li>
+                    <li>Carpets</li>
+                </ul>
+            </li>
+            <li>
+                Storage
+                <ul> <!-- moving the UL to the next line will cause an IE7 problem -->
+                    <li>Wall Shelving</li>
+                    <li>Kids Storage</li>
+                    <li>Baskets</li>
+                    <li>Multimedia Storage</li>
+                    <li>Floor Shelving</li>
+                    <li>Toilet Roll Holders</li>
+                    <li>Storage Jars</li>
+                    <li>Drawers</li>
+                    <li>Boxes</li>
+                </ul>
+
+            </li>
+            <li>
+                Lights
+                <ul> <!-- moving the UL to the next line will cause an IE7 problem -->
+                    <li>Ceiling</li>
+                    <li>Table</li>
+                    <li>Floor</li>
+                    <li>Shades</li>
+                    <li>Wall Lights</li>
+                    <li>Spotlights</li>
+                    <li>Push Light</li>
+                    <li>String Lights</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        Stores
+        <ul>
+            <li>
+                <div id="template" class="k-content" style="padding: 10px;">
+                    <h2>Around the Globe</h2>
+                    <ol>
+                        <li>United States</li>
+                        <li>Europe</li>
+                        <li>Canada</li>
+                        <li>Australia</li>
+                    </ol>
+                    <button class="k-button">See full list</button>
+                </div>
+            </li>
+        </ul>
+    </li>
+    <li>
+        Blog
+    </li>
+    <li>
+        Company
+    </li>
+    <li>
+        Events
+    </li>
+    <li disabled="disabled">
+        News
+    </li>
+</ul>
+</section>
+
+<section class="telerik-section">
+<h3>Telerik MVC UI</h3>
+<h4>(example styling only, no behaviours of Telerik MVC included as this project has no reference to Telerik MVC, only a compatible stylesheet)</h4>
+
+<ul class="t-widget t-reset t-header t-menu">
+    <li class="t-item t-highlighted t-state-default"><a class="t-link" href="#">Home</a></li>
+    <li class="t-item t-state-default"><a class="t-link" href="#">Analysis</a></li>
+    <li class="t-item t-state-default"><a class="t-link" href="#">Billboard</a></li>
+    <li class="t-item t-state-default" style=""><a class="t-link" href="#">Tools<span class="t-icon t-arrow-down"></span></a>
+        <div class="t-animation-container" style="width: 169px; height: 112px;">
+            <ul class="t-group" style="display: block; width: 167px; margin-top:0">
+                <li class="t-item t-state-default"><a class="t-link" href="#">Overview</a></li>
+                <li class="t-item t-state-default"><a class="t-link" href="#">Overview</a></li>
+                <li class="t-item t-state-default"><a class="t-link" href="#">Overview</a></li>
+            </ul>
+        </div>
+    </li>
+</ul>
+</section>
+
+<script language="javascript" type="text/javascript">
+    $(document).ready(function () {
+        $("#jqueryUiHorizontalMenu").menu();
+        $("#jqueryUiVerticalMenu").menu();
+        $("#kendoUIHorizontalMenu").kendoMenu();
+    });
+</script>
+
+</section>

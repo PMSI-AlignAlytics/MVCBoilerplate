@@ -1,0 +1,140 @@
+﻿<section id="dev-guide-grids">
+
+<div class="page-header">
+    <h1>Grids</h1>
+</div>
+
+<h3>SlickGrid</h3>
+
+<a href="https://github.com/mleibman/SlickGrid" class="dev-guide-show-site">SlickGrid (https://github.com/mleibman/SlickGrid)</a>
+
+<p>SlickGrid is a fast javascript based grid, jQuery UI compliant.</p>
+
+<script>
+    var grid;
+    var columns = [
+    { id: "title", name: "Title", field: "title" },
+    { id: "duration", name: "Duration", field: "duration" },
+    { id: "%", name: "% Complete", field: "percentComplete" },
+    { id: "start", name: "Start", field: "start" },
+    { id: "finish", name: "Finish", field: "finish" },
+    { id: "effort-driven", name: "Effort Driven", field: "effortDriven" }
+  ];
+
+    var options = {
+        enableCellNavigation: true,
+        enableColumnReorder: false,
+    };
+
+    $(function () {
+        grid = new Slick.Grid("#myGrid", createRandomData(500), columns, options);
+        grid = new Slick.Grid("#myGridMuiTable", createRandomData(500), columns, MvcBoilerPlate.SlickGrid.dynamicSizeOptions(options, "#myGridMuiTable"));
+    })
+</script>
+
+
+<div class="bs-docs-example">
+    <div id="myGrid" style="width:600px;height:500px;"></div>
+</div>
+
+<pre class="prettyprint">
+    var grid;
+    var columns = [
+    { id: "title", name: "Title", field: "title" },
+    { id: "duration", name: "Duration", field: "duration" },
+    { id: "%", name: "% Complete", field: "percentComplete" },
+    { id: "start", name: "Start", field: "start" },
+    { id: "finish", name: "Finish", field: "finish" },
+    { id: "effort-driven", name: "Effort Driven", field: "effortDriven" }
+  ];
+
+    var options = {
+        enableCellNavigation: true,
+        enableColumnReorder: false
+    };
+
+    $(function () {
+
+        grid = new Slick.Grid("#myGrid", createRandomData(500), columns, options);
+    })    
+</pre>
+
+<h3>Formatting SlickGrid as a Table</h3>
+
+<p>Using the <code>.mui-table-slickgrid</code> class and using the MVC Boilerplate dynamic initialiser for slickgrid... <code> MvcBoilerPlate.SlickGrid.dynamicSizeOptions(options, target)</code> in this case we pass <code>#myGridMuiTable</code> as the target (note this is jQuery selector)</p>
+
+<div class="bs-docs-example">
+    <div id="myGridMuiTable" style="width:600px;height:500px;" class="mui-table-slickgrid table-striped"></div>
+</div>
+
+<p>The above example makes use of BootStrap's <code>table-striped</code> class</p>
+
+
+<h3>Kendo UI Grid</h3>
+
+<div id="grid" style="height: 380px"></div>
+
+<script>
+
+    function createRandomData(numberOfRows){
+        var data = [];
+        for (var i = 0; i < numberOfRows; i++) {
+            data[i] = {
+                title: "Task " + i,
+                duration: "5 days",
+                percentComplete: Math.round(Math.random() * 100),
+                start: "01/01/2009",
+                finish: "01/05/2009",
+                effortDriven: (i % 5 == 0)
+            };
+        }
+
+        return data;
+    }
+
+    $(document).ready(function () {
+        $("#grid").kendoGrid({
+
+            dataSource: {
+                data: createRandomData(50),
+                pageSize: 10
+            },
+
+            groupable: true,
+
+            sortable: true,
+
+            pageable: {
+                refresh: true,
+                pageSizes: true
+            },
+
+            columns: [{
+                    field: "title",
+                    width: 90,
+                    title: "Title"
+                }, 
+                {
+                    field: "duration",
+                    width: 90,
+                    title: "Duration"
+                }, 
+                {
+                    width: 100,
+                    field: "percentComplete",
+                    title : "% Complete"
+                }, 
+                {
+                    width: 100,
+                    field: "start",
+                    title: "Start"
+                }
+            ]
+        });
+    });
+</script>
+
+<h3>Telerik MVC Grid</h3>
+
+<div class="t-widget t-grid" id="Grid"><div class="t-grouping-header">Drag a column header and drop it here to group by that column</div><div class="t-grid-header" style="padding-right: 17px; "><div class="t-grid-header-wrap"><table cellspacing="0"><colgroup><col style="width:100px"><col style="width:200px"><col><col style="width:120px"></colgroup><tbody><tr><th class="t-header" scope="col"><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-orderBy=OrderID-asc">Order ID</a><div class="t-grid-filter t-state-default"><span class="t-icon t-filter">Filter</span></div></th><th class="t-header" scope="col"><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-orderBy=ContactName-asc">Contact Name</a><div class="t-grid-filter t-state-default"><span class="t-icon t-filter">Filter</span></div></th><th class="t-header" scope="col"><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-orderBy=ShipAddress-asc">Ship Address</a><div class="t-grid-filter t-state-default"><span class="t-icon t-filter">Filter</span></div></th><th class="t-header" scope="col"><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-orderBy=OrderDate-asc">Order Date</a><div class="t-grid-filter t-state-default"><span class="t-icon t-filter">Filter</span></div></th></tr></tbody></table></div></div><div class="t-grid-content" style="height:200px"><table cellspacing="0"><colgroup><col style="width:100px"><col style="width:200px"><col><col style="width:120px"></colgroup><tbody><tr><td>10248</td><td>Paul Henriot</td><td>59 rue de l'Abbaye</td><td>07/04/1996</td></tr><tr class="t-alt"><td>10249</td><td>Karin Josephs</td><td>Luisenstr. 48</td><td>07/05/1996</td></tr><tr><td>10250</td><td>Mario Pontes</td><td>Rua do Paço, 67</td><td>07/08/1996</td></tr><tr class="t-alt"><td>10251</td><td>Mary Saveley</td><td>2, rue du Commerce</td><td>07/08/1996</td></tr><tr><td>10252</td><td>Pascale Cartrain</td><td>Boulevard Tirou, 255</td><td>07/09/1996</td></tr><tr class="t-alt"><td>10253</td><td>Mario Pontes</td><td>Rua do Paço, 67</td><td>07/10/1996</td></tr><tr><td>10254</td><td>Yang Wang</td><td>Hauptstr. 31</td><td>07/11/1996</td></tr><tr class="t-alt"><td>10255</td><td>Michael Holz</td><td>Starenweg 5</td><td>07/12/1996</td></tr><tr><td>10256</td><td>Paula Parente</td><td>Rua do Mercado, 12</td><td>07/15/1996</td></tr><tr class="t-alt"><td>10257</td><td>Carlos Hernández</td><td>Carrera 22 con Ave. Carlos Soublette #8-35</td><td>07/16/1996</td></tr></tbody></table></div><div class="t-grid-pager t-grid-bottom"><div class="t-status"><a class="t-icon t-refresh" href="/aspnet-mvc/Grid?ajax=True">Refresh</a></div><div class="t-pager t-reset"><a class="t-link t-state-disabled" href="#"><span class="t-icon t-arrow-first">first</span></a><a class="t-link t-state-disabled" href="#"><span class="t-icon t-arrow-prev">prev</span></a><div class="t-numeric"><span class="t-state-active">1</span><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-page=2">2</a><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-page=3">3</a><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-page=4">4</a><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-page=5">5</a><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-page=6">6</a><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-page=7">7</a><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-page=8">8</a><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-page=9">9</a><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-page=10">10</a><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-page=11">...</a></div><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-page=2"><span class="t-icon t-arrow-next">next</span></a><a class="t-link" href="/aspnet-mvc/Grid?ajax=True&amp;Grid-page=83"><span class="t-icon t-arrow-last">last</span></a></div><div class="t-status-text">Displaying items 1 - 10 of 830</div></div></div>
+</section>

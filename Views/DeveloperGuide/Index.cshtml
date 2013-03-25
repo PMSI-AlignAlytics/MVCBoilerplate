@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Style Guide";
+    ViewBag.SubTitle = "MVC Boilerplate is Bootstrap + Third Party Widget library CSS converted to .less for themeability. Giving you a common ground.";    
+
+    ViewBag.CurrentNav = "Style";
+    ViewBag.UseGoogleAnalytics = false;            
+}
+
+@section SideNavigation {
+    @Html.Partial("Layout/_SideNavigation")
+}
+
+The following Style Guide is taken mainly from Twitter's Bootstrap, but rehashed including other popular widget libraries and extensions to give you a common look up point for styles and assets.
+
+@Html.Partial("_Typography")
+
+@Html.Partial("_Code")
+
+@Html.Partial("_Tables")
+
+@Html.Partial("_Grids")
+
+@Html.Partial("_Forms")
+
+@Html.Partial("_Dropdowns")
+
+@Html.Partial("_Buttons")
+
+@Html.Partial("_ButtonGroups")
+
+@Html.Partial("_Navs")
+
+@Html.Partial("_NavBar")
+
+@Html.Partial("_BreadCrumbsPagination")
+
+@Html.Partial("_LabelsAndBadges")
+
+@Html.Partial("_Images")
+
+@Html.Partial("_Icons")
+
+@Html.Partial("_ColourSchema")
+
+@Html.Partial("_InlineStyles")
+
+
+
+
+@Html.Partial("_Accordions")
+
+@Html.Partial("_InputWidgets")
+
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {
+        prettyPrint();
+    });
+</script>

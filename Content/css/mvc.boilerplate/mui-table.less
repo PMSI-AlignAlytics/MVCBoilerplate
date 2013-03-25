@@ -1,0 +1,250 @@
+﻿
+// MVCBoilerplate UI Table
+.mui-table
+{
+	width: 100%;
+	margin-bottom: @baseLineHeight;
+
+	// Cells
+	th,
+	td 
+	{
+		padding: 8px;
+		line-height: @baseLineHeight;
+		text-align: left;
+		vertical-align: top;
+		background-color : @tableBackgroundColor
+	}
+
+	th 
+	{
+		font-weight: bold;
+	}
+	
+	// Bottom align for column headings
+	thead th 
+	{
+		vertical-align: bottom;
+	}
+	
+	// Account for multiple tbody instances
+	tbody + tbody {
+		border-top: 2px solid @tableBorder;
+	}
+
+	// Adaptation of bootstrap .table-bordered
+	
+	border-collapse: separate; // Done so we can round those corners!
+	*border-collapse: collapse; // IE7 can't round corners anyway
+
+	// For first th or td in the first row in the first thead or tbody
+	thead:first-child tr:first-child th.mui-column-header.first,
+	tbody:first-child tr:first-child td:first-child,
+	tbody tr:first-child th.mui-row-header
+	{
+		-webkit-border-top-left-radius: 4px;
+				border-top-left-radius: 4px;
+			-moz-border-radius-topleft: 4px;
+			border-left : 1px solid @tableBorder;
+	}
+
+	td, th {
+		border-top : 1px solid @tableBorder;
+		border-left:  1px solid @tableBorder;
+	}
+
+	tr td:last-child,
+	tr th:last-child
+	{
+		border-right : 1px solid @tableBorder;
+	}
+
+	tbody:last-child tr:last-child td,
+	tbody:last-child tr:last-child th
+	{
+		border-bottom : 1px solid @tableBorder;
+	}
+
+	thead:last-child tr:last-child td:first-child,
+	tbody:last-child tr:last-child th:first-child,
+	{
+		-webkit-border-bottom-left-radius: 4px;
+				border-bottom-left-radius: 4px;
+			-moz-border-radius-bottomleft: 4px;
+	}
+
+	
+	thead:first-child tr:first-child th:last-child,
+	tbody:first-child tr:first-child td:last-child 
+	{
+		-webkit-border-top-right-radius: 4px;
+				border-top-right-radius: 4px;
+			-moz-border-radius-topright: 4px;
+			border-top : 1px solid @tableBorder;
+			border-right : 1px solid @tableBorder;
+	}
+	
+	// For first th or td in the first row in the first thead or tbody
+	thead:last-child tr:last-child th:first-child,
+	tbody:last-child tr:last-child td:first-child,
+	tfoot:last-child tr:last-child td:first-child 
+	{
+		.border-radius(0 0 0 4px);
+		-webkit-border-bottom-left-radius: 4px;
+				border-bottom-left-radius: 4px;
+			-moz-border-radius-bottomleft: 4px;
+	}
+
+	thead:last-child tr:last-child th:last-child,
+	tbody:last-child tr:last-child td:last-child,
+	tfoot:last-child tr:last-child td:last-child 
+	{
+		-webkit-border-bottom-right-radius: 4px;
+				border-bottom-right-radius: 4px;
+			-moz-border-radius-bottomright: 4px;
+	}
+
+	// Special fixes to round the left border on the first td/th
+	caption + thead tr:first-child th:first-child,
+	caption + tbody tr:first-child td:first-child,
+	colgroup + thead tr:first-child th:first-child,
+	colgroup + tbody tr:first-child td:first-child 
+	{
+		-webkit-border-top-left-radius: 4px;
+				border-top-left-radius: 4px;
+			-moz-border-radius-topleft: 4px;
+	}
+
+	caption + thead tr:first-child th:last-child,
+	caption + tbody tr:first-child td:last-child,
+	colgroup + thead tr:first-child th:last-child,
+	colgroup + tbody tr:first-child td:last-child {
+		-webkit-border-top-right-radius: 4px;
+				border-top-right-radius: 4px;
+			-moz-border-radius-topright: 4px;
+	}
+
+	.mui-column-header-row
+	{
+		.mui-row-header-placeholder
+		{
+			border-left: none;
+			border-top: none;
+		}
+
+
+		.mui-column-header
+		{
+			color: @base-content-color;
+			background-color: #F1F5FB !important;
+			font-weight: bold;
+		}
+	}
+
+	.mui-row-header 
+	{
+		color: @base-content-color;
+		background-color: @tableHeaderColour !important;
+		font-weight: bold;
+	}
+
+	.mui-value-cell
+	{
+		text-align : right;
+	}
+
+
+	tr.mui-detail-row 
+	{
+		font-size : 0.9em;
+
+		td
+		{
+			background-color : darken(@tableBackgroundColor, 5%);
+		}
+
+		th.mui-row-header
+		{
+			padding-left : @layout-indent-width !important;
+			background-color: darken(@tableHeaderColour, 5%) !important;
+		}
+	}
+
+	tr.mui-sub-detail-row 
+	{
+		font-size : 0.8em;
+
+		td
+		{
+			background-color : darken(@tableBackgroundColor, 10%);
+		}
+
+
+		th.mui-row-header
+		{
+			padding-left : (2 * @layout-indent-width) !important;
+			background-color: darken(@tableHeaderColour, 10%) !important;
+			font-style :  italic;
+		}
+	}
+}
+
+// MVCBoilerplate UI Table for SlickGrid
+.mui-table-slickgrid
+{
+	.slick-header
+	{
+		background : none;
+		background-color : @tableHeaderColour !important;
+		-webkit-border-top-right-radius: @tableBorderRadius;
+				border-top-right-radius: @tableBorderRadius;
+			-moz-border-radius-topright: @tableBorderRadius;
+		-webkit-border-top-left-radius: @tableBorderRadius;
+				border-top-left-radius: @tableBorderRadius;
+			-moz-border-radius-topleft: @tableBorderRadius;
+		box-sizing: border-box; // SlickGrid fixes the size of this div so without this the borders won't fit
+		border-left: 1px solid @tableBorder;
+		border-top: 1px solid @tableBorder;
+		border-right: 1px solid @tableBorder;
+
+		.slick-header-columns div
+		{ 
+			color: @base-content-color;
+			background : none;
+		}
+	}
+
+	.slick-viewport
+	{
+		border-left: 1px solid @tableBorder;
+		border-bottom: 1px solid @tableBorder;
+		border-right: 1px solid @tableBorder;
+	}
+
+	.slick-header-column,
+	.slick-cell
+	{
+
+		padding: 8px;
+		line-height: @baseLineHeight !important;
+		text-align: left;
+		vertical-align: top;
+		background-color : @tableBackgroundColor;
+		height : auto !important;
+	}
+
+	.slick-header-column
+	{
+		font-weight: bold;
+	}
+
+}
+
+// MVCBoilerplate UI Table for SlickGrid, provide for Bootstraps table-striped class.
+.mui-table-slickgrid.table-striped
+{
+    .slick-row:nth-child(odd) .slick-cell
+	{
+      background-color: @tableBackgroundAccent !important;
+    }
+}

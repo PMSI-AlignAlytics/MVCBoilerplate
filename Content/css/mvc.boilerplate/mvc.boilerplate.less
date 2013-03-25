@@ -1,0 +1,182 @@
+﻿@import "variables";
+@import "../bootstrap/bootstrap";
+@import "jquery-ui";
+@import "telerik";
+@import "sprites";
+@import "prettify";
+
+@import "dev-guide";
+
+body
+{
+	background-color : #fff;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: @base-color;
+}
+
+body {
+    font-size: @base-font-size;
+    line-height: 1.4;
+	font-family: sans-serif;
+}
+
+::-moz-selection {
+    background: @selection-color;
+    text-shadow: none;
+}
+
+::selection {
+    background: @selection-color;
+    text-shadow: none;
+}
+
+
+
+p
+{
+	line-height: 150%;
+	color: #666;
+	margin: 10px 0;
+}
+
+blockquote {
+	font-style: italic;
+	color: #888;
+	padding: 0 0 0 20px;
+	border-left: 2px solid #CCC;
+}
+
+blockquote::before {
+	display: block;
+	height: 0;
+	content: "“";
+	margin-left: -1.5em;
+	font: italic 299%/1 serif;
+	color: #999;
+	font-weight: bold;
+}
+
+@import "mui-table";
+
+
+.mui-horizontal-menu .ui-menu-item {
+    display: inline-block;
+    float: left !important;
+	clear: none !important;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.mui-horizontal-menu ul .ui-menu-item {
+    display: inline-block;
+    float: left !important;
+	clear: both !important;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+
+.mui-horizontal-menu::after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+
+ul.mui-breadcrumbs
+{
+	margin:10px 0;
+	padding:0;
+	line-height:0%;
+	font-size:0;
+	border:1px solid transparent;
+
+	li
+	{
+		list-style-type:none;
+		margin:0;
+		padding:0;
+		display:inline-block;
+		*display:inline; /* IE ONLY*/
+		position:relative;
+		zoom:1;
+		line-height:100%;
+		font-size:14px; /* 0.8em default to override font-size:0; on parent*/
+
+		a
+		{
+			display:inline-block;
+			*display:inline; /* IE ONLY*/
+			position:relative;
+			zoom:1;
+			margin:0;
+			padding:10px 25px 10px 15px;
+			background:url(../../img/html-kickstart/breadcrumbs-bg.gif) no-repeat right center;
+			text-decoration:none;
+			border-top:1px solid #efefef;
+			border-bottom:1px solid #efefef;
+			font-size:12px;
+		}
+		
+		a:hover
+		{
+			text-decoration:underline;
+		}
+
+	}
+
+	li.first a
+	{
+		border-left:1px solid #efefef;
+	}
+
+	li.last a
+	{
+		background:none;
+		border-right:1px solid #efefef;
+	}
+
+	li.ui-state-active
+	{
+		border : none;
+
+		a
+		{
+			color : @widget-active-color;
+		}
+	}
+}
+
+@import "../bootstrap/responsive";
+
+.build-yourapp-placeholder
+{
+	margin-left : auto;
+	margin-right : auto;
+	width : 500px;
+	border : 3px dashed #ececec;
+	padding : 20px;
+	border-radius : 20px;
+
+	h2
+	{
+		color : #ababab;
+		text-align : center;
+	}
+
+	p
+	{
+		text-align : center;
+	}
+}

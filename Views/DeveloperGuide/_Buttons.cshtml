@@ -1,0 +1,337 @@
+﻿<!-- Buttons
+================================================== -->
+<section id="dev-guide-buttons">
+    <div class="page-header">
+    <h1>Buttons</h1>
+    </div>
+
+    <h2>Default buttons</h2>
+    <p>Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.</p>
+    <table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+        <th>Button</th>
+        <th>class=""</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td><button type="button" class="btn">Default</button></td>
+        <td><code>btn</code></td>
+        <td>Standard gray button with gradient</td>
+        </tr>
+        <tr>
+        <td><button type="button" class="btn btn-primary">Primary</button></td>
+        <td><code>btn btn-primary</code></td>
+        <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+        </tr>
+        <tr>
+        <td><button type="button" class="btn btn-info">Info</button></td>
+        <td><code>btn btn-info</code></td>
+        <td>Used as an alternative to the default styles</td>
+        </tr>
+        <tr>
+        <td><button type="button" class="btn btn-success">Success</button></td>
+        <td><code>btn btn-success</code></td>
+        <td>Indicates a successful or positive action</td>
+        </tr>
+        <tr>
+        <td><button type="button" class="btn btn-warning">Warning</button></td>
+        <td><code>btn btn-warning</code></td>
+        <td>Indicates caution should be taken with this action</td>
+        </tr>
+        <tr>
+        <td><button type="button" class="btn btn-danger">Danger</button></td>
+        <td><code>btn btn-danger</code></td>
+        <td>Indicates a dangerous or potentially negative action</td>
+        </tr>
+        <tr>
+        <td><button type="button" class="btn btn-inverse">Inverse</button></td>
+        <td><code>btn btn-inverse</code></td>
+        <td>Alternate dark gray button, not tied to a semantic action or use</td>
+        </tr>
+        <tr>
+        <td><button type="button" class="btn btn-link">Link</button></td>
+        <td><code>btn btn-link</code></td>
+        <td>Deemphasize a button by making it look like a link while maintaining button behavior</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <h4>Cross browser compatibility</h4>
+    <p>IE9 doesn't crop background gradients on rounded corners, so we remove it. Related, IE9 jankifies disabled <code>button</code> elements, rendering text gray with a nasty text-shadow that we cannot fix.</p>
+
+
+    <h2>Button sizes</h2>
+    <p>Fancy larger or smaller buttons? Add <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code> for additional sizes.</p>
+    <div class="bs-docs-example">
+    <p>
+        <button type="button" class="btn btn-large btn-primary">Large button</button>
+        <button type="button" class="btn btn-large">Large button</button>
+    </p>
+    <p>
+        <button type="button" class="btn btn-primary">Default button</button>
+        <button type="button" class="btn">Default button</button>
+    </p>
+    <p>
+        <button type="button" class="btn btn-small btn-primary">Small button</button>
+        <button type="button" class="btn btn-small">Small button</button>
+    </p>
+    <p>
+        <button type="button" class="btn btn-mini btn-primary">Mini button</button>
+        <button type="button" class="btn btn-mini">Mini button</button>
+    </p>
+    </div>
+<pre class="prettyprint ">
+&lt;p&gt;
+&lt;button class="btn btn-large btn-primary" type="button"&gt;Large button&lt;/button&gt;
+&lt;button class="btn btn-large" type="button"&gt;Large button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;button class="btn btn-primary" type="button"&gt;Default button&lt;/button&gt;
+&lt;button class="btn" type="button"&gt;Default button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;button class="btn btn-small btn-primary" type="button"&gt;Small button&lt;/button&gt;
+&lt;button class="btn btn-small" type="button"&gt;Small button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&lt;button class="btn btn-mini btn-primary" type="button"&gt;Mini button&lt;/button&gt;
+&lt;button class="btn btn-mini" type="button"&gt;Mini button&lt;/button&gt;
+&lt;/p&gt;
+</pre>
+    <p>Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code>.btn-block</code>.</p>
+    <div class="bs-docs-example">
+    <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
+        <button type="button" class="btn btn-large btn-block btn-primary">Block level button</button>
+        <button type="button" class="btn btn-large btn-block">Block level button</button>
+    </div>
+    </div>
+<pre class="prettyprint ">
+&lt;button class="btn btn-large btn-block btn-primary" type="button"&gt;Block level button&lt;/button&gt;
+&lt;button class="btn btn-large btn-block" type="button"&gt;Block level button&lt;/button&gt;
+</pre>
+
+
+    <h2>Disabled state</h2>
+    <p>Make buttons look unclickable by fading them back 50%.</p>
+
+    <h3>Anchor element</h3>
+    <p>Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.</p>
+    <p class="bs-docs-example">
+    <a href="#" class="btn btn-large btn-primary disabled">Primary link</a>
+    <a href="#" class="btn btn-large disabled">Link</a>
+    </p>
+<pre class="prettyprint ">
+&lt;a href="#" class="btn btn-large btn-primary disabled"&gt;Primary link&lt;/a&gt;
+&lt;a href="#" class="btn btn-large disabled"&gt;Link&lt;/a&gt;
+</pre>
+    <p>
+    <span class="label label-info">Heads up!</span>
+    We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required. Also, this class is only for aesthetic; you must use custom JavaScript to disable links here.
+    </p>
+
+    <h3>Button element</h3>
+    <p>Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.</p>
+    <p class="bs-docs-example">
+    <button type="button" class="btn btn-large btn-primary disabled" disabled="disabled">Primary button</button>
+    <button type="button" class="btn btn-large" disabled>Button</button>
+    </p>
+<pre class="prettyprint ">
+&lt;button type="button" class="btn btn-large btn-primary disabled" disabled="disabled"&gt;Primary button&lt;/button&gt;
+&lt;button type="button" class="btn btn-large" disabled&gt;Button&lt;/button&gt;
+</pre>
+
+
+    <h2>One class, multiple tags</h2>
+    <p>Use the <code>.btn</code> class on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+    <form class="bs-docs-example">
+    <a class="btn" href="">Link</a>
+    <button class="btn" type="submit">Button</button>
+    <input class="btn" type="button" value="Input">
+    <input class="btn" type="submit" value="Submit">
+    </form>
+<pre class="prettyprint ">
+&lt;a class="btn" href=""&gt;Link&lt;/a&gt;
+&lt;button class="btn" type="submit"&gt;Button&lt;/button&gt;
+&lt;input class="btn" type="button" value="Input"&gt;
+&lt;input class="btn" type="submit" value="Submit"&gt;
+</pre>
+    <p>As a best practice, try to match the element for your context to ensure matching cross-browser rendering. If you have an <code>input</code>, use an <code>&lt;input type="submit"&gt;</code> for your button.</p>
+
+            <h2>State Messages</h2>
+            <p>Add data-loading-text="Loading..." to use a loading state on a button.</p>
+            <div class="bs-docs-example" style="padding-bottom: 24px;">
+              <button type="button" id="fat-btn" data-loading-text="loading..." class="btn btn-primary">
+                Loading state
+              </button>
+            </div>
+            <pre class="prettyprint">&lt;button type="button" class="btn btn-primary" data-loading-text="Loading..."&gt;Loading state&lt;/button&gt;</pre>
+
+            <pre class="prettyprint">
+    // button state demo
+    $('#fat-btn').click(function () {
+        var btn = $(this)
+        btn.bootstrapButton('loading')
+        setTimeout(function () {
+            btn.bootstrapButton('reset')
+        }, 3000)
+    })
+            </pre>
+
+            <h2>Toggle Buttons</h2>
+            <p>Add data-toggle="button" to activate toggling on a single button.</p>
+            <div class="bs-docs-example" style="padding-bottom: 24px;">
+              <button type="button" class="btn btn-primary" data-toggle="button">Single Toggle</button>
+            </div>
+            <pre class="prettyprint">&lt;button type="button" class="btn" data-toggle="button"&gt;Single Toggle&lt;/button&gt;</pre>
+
+            <h4>Checkbox</h4>
+            <p>Add data-toggle="buttons-checkbox" for checkbox style toggling on btn-group.</p>
+            <div class="bs-docs-example" style="padding-bottom: 24px;">
+              <div class="btn-group" data-toggle="buttons-checkbox">
+                <button type="button" class="btn btn-primary">Left</button>
+                <button type="button" class="btn btn-primary">Middle</button>
+                <button type="button" class="btn btn-primary">Right</button>
+              </div>
+            </div>
+<pre class="prettyprint">
+&lt;div class="btn-group" data-toggle="buttons-checkbox"&gt;
+  &lt;button type="button" class="btn"&gt;Left&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;Middle&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;Right&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+            <h4>Radio</h4>
+            <p>Add data-toggle="buttons-radio" for radio style toggling on btn-group.</p>
+            <div class="bs-docs-example" style="padding-bottom: 24px;">
+              <div class="btn-group" data-toggle="buttons-radio">
+                <button type="button" class="btn btn-primary">Left</button>
+                <button type="button" class="btn btn-primary">Middle</button>
+                <button type="button" class="btn btn-primary">Right</button>
+              </div>
+            </div>
+<pre class="prettyprint">
+&lt;div class="btn-group" data-toggle="buttons-radio"&gt;
+  &lt;button type="button" class="btn"&gt;Left&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;Middle&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;Right&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+            <h4>jQuery UI ButtonSet</h4>
+            <p>Call the <code>buttonset()</code> method to create a buttonset.  Please note that you must use checkboxes as the target</p>
+            
+            <div class="bs-docs-example" style="padding-bottom: 24px;">
+                <div id="jQueryUiButtonSet">
+                    <input type="checkbox" id="check1" /><label for="check1">Left</label>
+                    <input type="checkbox" id="check2" /><label for="check2">Middle</label>
+                    <input type="checkbox" id="check3" /><label for="check3">Right</label>
+                </div>
+            </div>
+            <pre class="prettyprint">
+&lt;div id=&quot;jQueryUiButtonSet&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;check1&quot; /&gt;&lt;label for=&quot;check1&quot;&gt;Left&lt;/label&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;check2&quot; /&gt;&lt;label for=&quot;check2&quot;&gt;Middle&lt;/label&gt;
+    &lt;input type=&quot;checkbox&quot; id=&quot;check3&quot; /&gt;&lt;label for=&quot;check3&quot;&gt;Right&lt;/label&gt;
+&lt;/div&gt;
+            </pre>
+            
+            <pre class="prettyprint">
+    $('#jQueryUiButtonSet').buttonset();
+            </pre>
+
+            <script>
+                $('#jQueryUiButtonSet').buttonset();
+            </script>
+
+            <h4>jQuery UI Split Button</h4>
+
+            <p>Call the MVC Boilerplate helper method<code>splitbutton()</code> to create a jQuery UI split button.</p>
+
+            <div class="bs-docs-example" style="padding-bottom: 24px;">
+            <div id="jQueryUiSplitButton">
+                <div>
+                    <button id="runLastAction">Run last action</button>
+                </div>
+                <ul>
+                    <li><a href="#">Open...</a></li>
+                    <li><a href="#">Save</a></li>
+                    <li><a href="#">Delete</a></li>
+                </ul>
+            </div>
+            </div>
+            <pre class="prettyprint">
+&lt;div id=&quot;jQueryUiSplitButton&quot;&gt;
+    &lt;div&gt;
+        &lt;button id=&quot;runLastAction&quot;&gt;Run last action&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Open...&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Save&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Delete&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+            </pre>
+
+            <pre class="prettyprint">
+    $("#jQueryUiSplitButton").splitbutton();
+            </pre>
+
+            <script>
+                $(document).ready(function () {
+                    $("#jQueryUiSplitButton").splitbutton();
+                });
+            </script>
+
+            <hr class="bs-docs-separator">
+
+
+            <h2>Usage</h2>
+            <p>Enable buttons via JavaScript:</p>
+            <pre class="prettyprint">$('.nav-tabs').bootstrapButton()</pre>
+
+            <div class="alert alert-info">
+              <strong>Heads up!</strong>
+              Boilerplate has taken a simple approach of renaming Bootstrap's "button" method "bootstrapButton" to avoid <a href="https://github.com/twitter/bootstrap/issues/2248">Bootstrap vs. jQuery UI conflicts</a>
+            </div>
+
+
+            <h3>Markup</h3>
+            <p>Data attributes are integral to the button plugin. Check out the example code below for the various markup types.</p>
+
+            <h3>Options</h3>
+            <p><em>None</em></p>
+
+            <h3>Methods</h3>
+            <h4>$().bootstrapButton('toggle')</h4>
+            <p>Toggles push state. Gives the button the appearance that it has been activated.</p>
+            <div class="alert alert-info">
+              <strong>Heads up!</strong>
+              You can enable auto toggling of a button by using the <code>data-toggle</code> attribute.
+            </div>
+            <pre class="prettyprint">&lt;button type="button" class="btn" data-toggle="button" &gt;…&lt;/button&gt;</pre>
+            <h4>$().bootstrapButton('loading')</h4>
+            <p>Sets button state to loading - disables button and swaps text to loading text. Loading text should be defined on the button element using the data attribute <code>data-loading-text</code>.
+            </p>
+            <pre class="prettyprint">&lt;button type="button" class="btn" data-loading-text="loading stuff..." &gt;...&lt;/button&gt;</pre>
+            <div class="alert alert-info">
+              <strong>Heads up!</strong>
+              <a href="https://github.com/twitter/bootstrap/issues/793">Firefox persists the disabled state across page loads</a>. A workaround for this is to use <code>autocomplete="off"</code>.
+            </div>
+            <h4>$().bootstrapButton('reset')</h4>
+            <p>Resets button state - swaps text to original text.</p>
+            <h4>$().bootstrapButton(string)</h4>
+            <p>Resets button state - swaps text to any data defined text state.</p>
+<pre class="prettyprint">&lt;button type="button" class="btn" data-complete-text="finished!" &gt;...&lt;/button&gt;
+&lt;script&gt;
+  $('.btn').bootstrapButton('complete')
+&lt;/script&gt;
+</pre>
+          </section>
+
+
+
+</section>

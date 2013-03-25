@@ -1,0 +1,922 @@
+﻿<!-- Tables
+================================================== -->
+
+<section id="dev-guide-tables">
+    <div class="page-header">
+    <h1>Tables</h1>
+    </div>
+
+    <h2>Default styles</h2>
+    <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.</p>
+    <div class="bs-docs-example">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@@mdo</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@@fat</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@@twitter</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+<pre class="prettyprint">
+&lt;table class="table"&gt;
+…
+&lt;/table&gt;
+</pre>
+
+
+    <hr class="bs-docs-separator">
+
+
+    <h2>Optional classes</h2>
+    <p>Add any of the following classes to the <code>.table</code> base class.</p>
+
+    <h3><code>.table-striped</code></h3>
+    <p>Adds zebra-striping to any table row within the <code>&lt;tbody&gt;</code> via the <code>:nth-child</code> CSS selector (not available in IE7-IE8).</p>
+    <div class="bs-docs-example">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@@mdo</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@@fat</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@@twitter</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+<pre class="prettyprint" style="margin-bottom: 18px;">
+&lt;table class="table table-striped"&gt;
+…
+&lt;/table&gt;
+</pre>
+
+    <h3><code>.table-bordered</code></h3>
+    <p>Add borders and rounded corners to the table.</p>
+    <div class="bs-docs-example">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td rowspan="2">1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@@mdo</td>
+        </tr>
+        <tr>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@@TwBootstrap</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@@fat</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td colspan="2">Larry the Bird</td>
+            <td>@@twitter</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+<pre class="prettyprint">
+&lt;table class="table table-bordered"&gt;
+…
+&lt;/table&gt;
+</pre>
+
+    <h3><code>.table-hover</code></h3>
+    <p>Enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
+    <div class="bs-docs-example">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@@mdo</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@@fat</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td colspan="2">Larry the Bird</td>
+            <td>@@twitter</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+<pre class="prettyprint" style="margin-bottom: 18px;">
+&lt;table class="table table-hover"&gt;
+…
+&lt;/table&gt;
+</pre>
+
+    <h3><code>.table-condensed</code></h3>
+    <p>Makes tables more compact by cutting cell padding in half.</p>
+    <div class="bs-docs-example">
+    <table class="table table-condensed">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@@mdo</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@@fat</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td colspan="2">Larry the Bird</td>
+            <td>@@twitter</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+<pre class="prettyprint" style="margin-bottom: 18px;">
+&lt;table class="table table-condensed"&gt;
+…
+&lt;/table&gt;
+</pre>
+
+
+    <hr class="bs-docs-separator">
+
+
+    <h2>Optional row classes</h2>
+    <p>Use contextual classes to color table rows.</p>
+    <table class="table table-bordered table-striped">
+    <colgroup>
+        <col class="span1">
+        <col class="span7">
+    </colgroup>
+    <thead>
+        <tr>
+        <th>Class</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>
+            <code>.success</code>
+        </td>
+        <td>Indicates a successful or positive action.</td>
+        </tr>
+        <tr>
+        <td>
+            <code>.error</code>
+        </td>
+        <td>Indicates a dangerous or potentially negative action.</td>
+        </tr>
+        <tr>
+        <td>
+            <code>.warning</code>
+        </td>
+        <td>Indicates a warning that might need attention.</td>
+        </tr>
+        <tr>
+        <td>
+            <code>.info</code>
+        </td>
+        <td>Used as an alternative to the default styles.</td>
+        </tr>
+    </tbody>
+    </table>
+    <div class="bs-docs-example">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Product</th>
+            <th>Payment Taken</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="success">
+            <td>1</td>
+            <td>TB - Monthly</td>
+            <td>01/04/2012</td>
+            <td>Approved</td>
+        </tr>
+        <tr class="error">
+            <td>2</td>
+            <td>TB - Monthly</td>
+            <td>02/04/2012</td>
+            <td>Declined</td>
+        </tr>
+        <tr class="warning">
+            <td>3</td>
+            <td>TB - Monthly</td>
+            <td>03/04/2012</td>
+            <td>Pending</td>
+        </tr>
+        <tr class="info">
+            <td>4</td>
+            <td>TB - Monthly</td>
+            <td>04/04/2012</td>
+            <td>Call in to confirm</td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+<pre class="prettyprint">
+...
+&lt;tr class="success"&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;TB - Monthly&lt;/td&gt;
+&lt;td&gt;01/04/2012&lt;/td&gt;
+&lt;td&gt;Approved&lt;/td&gt;
+&lt;/tr&gt;
+...
+</pre>
+
+
+    <hr class="bs-docs-separator">
+
+
+    <h2>Supported table markup</h2>
+    <p>List of supported table HTML elements and how they should be used.</p>
+    <table class="table table-bordered table-striped">
+    <colgroup>
+        <col class="span1">
+        <col class="span7">
+    </colgroup>
+    <thead>
+        <tr>
+        <th>Tag</th>
+        <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>
+            <code>&lt;table&gt;</code>
+        </td>
+        <td>
+            Wrapping element for displaying data in a tabular format
+        </td>
+        </tr>
+        <tr>
+        <td>
+            <code>&lt;thead&gt;</code>
+        </td>
+        <td>
+            Container element for table header rows (<code>&lt;tr&gt;</code>) to label table columns
+        </td>
+        </tr>
+        <tr>
+        <td>
+            <code>&lt;tbody&gt;</code>
+        </td>
+        <td>
+            Container element for table rows (<code>&lt;tr&gt;</code>) in the body of the table
+        </td>
+        </tr>
+        <tr>
+        <td>
+            <code>&lt;tr&gt;</code>
+        </td>
+        <td>
+            Container element for a set of table cells (<code>&lt;td&gt;</code> or <code>&lt;th&gt;</code>) that appears on a single row
+        </td>
+        </tr>
+        <tr>
+        <td>
+            <code>&lt;td&gt;</code>
+        </td>
+        <td>
+            Default table cell
+        </td>
+        </tr>
+        <tr>
+        <td>
+            <code>&lt;th&gt;</code>
+        </td>
+        <td>
+            Special table cell for column (or row, depending on scope and placement) labels<br>
+            Must be used within a <code>&lt;thead&gt;</code>
+        </td>
+        </tr>
+        <tr>
+        <td>
+            <code>&lt;caption&gt;</code>
+        </td>
+        <td>
+            Description or summary of what the table holds, especially useful for screen readers
+        </td>
+        </tr>
+    </tbody>
+    </table>
+<pre class="prettyprint">
+&lt;table&gt;
+&lt;caption&gt;...&lt;/caption&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;...&lt;/th&gt;
+&lt;th&gt;...&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;td&gt;...&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+
+<hr class="bs-docs-separator">
+
+<h2>MVC Boilerpate Table Extensions</h2>
+
+<h3>Introducing Column Headers and Row Headers</h3>
+
+<h3><code>.mui-table</code></h3>
+
+<p>Use <code>&lt;th&gt;</code> instead of <code>&lt;td&gt;</code> for column and row header cells.
+Class your header cells with <code>.mui-column-header</code> and <code>.mui-row-header</code> respectively
+</p>
+
+<div class="bs-docs-example">
+<table class="mui-table">
+    <thead>
+        <tr class="mui-column-header-row">
+            <th class="mui-row-header-placeholder">
+            </th>
+            <th class="mui-column-header first">
+                Column 1
+            </th>
+            <th class="mui-column-header">
+                Column 2
+            </th>
+            <th class="mui-column-header">
+                Column 3
+            </th>
+            <th class="mui-column-header">
+                Column 4
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th class="mui-row-header">
+                Row Header 1
+            </th>
+            <td class="">
+                Stephen
+            </td>
+            <td class="mui-value-cell">
+                12321
+            </td>
+            <td class="mui-value-cell">
+                21321
+            </td>
+            <td class="mui-value-cell">
+                12321
+            </td>
+        </tr>
+        <tr>
+            <th class="mui-row-header">
+                Row Header 2
+            </th>
+            <td class="">
+                Stephen
+            </td>
+            <td class="mui-value-cell">
+                12321
+            </td>
+            <td class="mui-value-cell">
+                21321
+            </td>
+            <td class="mui-value-cell">
+                12321
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<a href="#" class="dev-guide-show-source" onclick="showSource('tablesMui')">show source</a>
+
+<div id="tablesMuiSource">
+<pre class="prettyprint pre-scrollable">
+&lt;table class=&quot;mui-table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr class=&quot;mui-column-header-row&quot;&gt;
+            &lt;th class=&quot;mui-row-header-placeholder&quot;&gt;
+            &lt;/th&gt;
+            &lt;th class=&quot;mui-column-header first&quot;&gt;
+                Column 1
+            &lt;/th&gt;
+            &lt;th class=&quot;mui-column-header&quot;&gt;
+                Column 2
+            &lt;/th&gt;
+            &lt;th class=&quot;mui-column-header&quot;&gt;
+                Column 3
+            &lt;/th&gt;
+            &lt;th class=&quot;mui-column-header&quot;&gt;
+                Column 4
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;mui-row-header&quot;&gt;
+                Row Header 1
+            &lt;/td&gt;
+            &lt;td class=&quot;&quot;&gt;
+                Stephen
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                12321
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                21321
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                12321
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+           ...
+        &lt;/tr&gt;
+        ...
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+</div>
+
+<h3>Semantic Helpers</h3>
+
+<p>With <code>.mui-table</code> you can use the following semantic helper classes</p>
+
+<table class="table table-bordered table-striped">
+<colgroup>
+    <col class="span1">
+    <col class="span7">
+</colgroup>
+<thead>
+    <tr>
+    <th>Class</th>
+    <th>Description</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+    <td>
+        <code>.mui-value-cell</code>
+    </td>
+    <td>Indicates a cell containing a numeric value or measure.</td>
+    </tr>
+    <tr>
+    <td>
+        <code>.mui-detail-row</code>
+    </td>
+    <td>Indicates a row containing detail information, contributing to a master row above</td>
+    </tr>
+    <tr>
+    <td>
+        <code>.mui-sub-detail-row</code>
+    </td>
+    <td>Indicates a sub row containing detail information, contributing to a detail row above</td>
+    </tr>
+</tbody>
+</table>
+
+<div class="bs-docs-example">
+
+<table class="mui-table">
+    <thead>
+        <tr class="mui-column-header-row">
+            <th class="mui-row-header-placeholder">
+            </th>
+            <th class="mui-column-header first">
+                Level 1
+            </th>
+            <th class="mui-column-header">
+                Level 2
+            </th>
+            <th class="mui-column-header">
+                Level 3
+            </th>
+            <th class="mui-column-header">
+                Level 4
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th class="mui-row-header">
+                Stephen
+            </th>
+            <td class="mui-value-cell">
+                700
+            </td>
+            <td class="mui-value-cell">
+                900
+            </td>
+            <td class="mui-value-cell">
+                600
+            </td>
+            <td class="mui-value-cell">
+                650
+            </td>
+        </tr>
+        <tr class="mui-detail-row">
+            <th class="mui-row-header">
+                Primary Objective Scores
+            </th>
+            <td class="mui-value-cell">
+                500
+            </td>
+            <td class="mui-value-cell">
+                400
+            </td>
+            <td class="mui-value-cell">
+                500
+            </td>
+            <td class="mui-value-cell">
+                400
+            </td>
+        </tr>
+        <tr class="mui-sub-detail-row">
+            <th class="mui-row-header">
+                Ninjas killed
+            </th>
+            <td class="mui-value-cell">
+                3
+            </td>
+            <td class="mui-value-cell">
+                5
+            </td>
+            <td class="mui-value-cell">
+                10
+            </td>
+            <td class="mui-value-cell">
+                18
+            </td>
+        </tr>
+        <tr class="mui-sub-detail-row">
+            <th class="mui-row-header">
+                Traps avoided
+            </th>
+            <td class="mui-value-cell">
+                20
+            </td>
+            <td class="mui-value-cell">
+                15
+            </td>
+            <td class="mui-value-cell">
+                10
+            </td>
+            <td class="mui-value-cell">
+                12
+            </td>
+        </tr>
+        <tr class="mui-sub-detail-row">
+            <th class="mui-row-header">
+                Geishas charmed
+            </th>
+            <td class="mui-value-cell">
+                8
+            </td>
+            <td class="mui-value-cell">
+                12
+            </td>
+            <td class="mui-value-cell">
+                4
+            </td>
+            <td class="mui-value-cell">
+                2
+            </td>
+        </tr>
+        <tr class="mui-detail-row">
+            <th class="mui-row-header">
+                Secondary Objective Scores
+            </th>
+            <td class="mui-value-cell">
+                200
+            </td>
+            <td class="mui-value-cell">
+                500
+            </td>
+            <td class="mui-value-cell">
+                100
+            </td>
+            <td class="mui-value-cell">
+                250
+            </td>
+        </tr>
+        <tr>
+            <th class="mui-row-header">
+                Dylan
+            </th>
+            <td class="mui-value-cell">
+                900
+            </td>
+            <td class="mui-value-cell">
+                1350
+            </td>
+            <td class="mui-value-cell">
+                800
+            </td>
+            <td class="mui-value-cell">
+                950
+            </td>
+        </tr>
+        <tr class="mui-detail-row">
+            <th class="mui-row-header">
+                Primary Objective Scores
+            </th>
+            <td class="mui-value-cell">
+                600
+            </td>
+            <td class="mui-value-cell">
+                650
+            </td>
+            <td class="mui-value-cell">
+                700
+            </td>
+            <td class="mui-value-cell">
+                650
+            </td>
+        </tr>
+        <tr class="mui-detail-row">
+            <th class="mui-row-header">
+                Secondary Objective Scores
+            </th>
+            <td class="mui-value-cell">
+                300
+            </td>
+            <td class="mui-value-cell">
+                700
+            </td>
+            <td class="mui-value-cell">
+                100
+            </td>
+            <td class="mui-value-cell">
+                300
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<pre class="prettyprint pre-scrollable">
+&lt;table class=&quot;mui-table&quot;&gt;
+    &lt;thead&gt;
+        &lt;tr class=&quot;mui-column-header-row&quot;&gt;
+            &lt;th class=&quot;mui-row-header-placeholder&quot;&gt;
+            &lt;/th&gt;
+            &lt;th class=&quot;mui-column-header first&quot;&gt;
+                Level 1
+            &lt;/th&gt;
+            &lt;th class=&quot;mui-column-header&quot;&gt;
+                Level 2
+            &lt;/th&gt;
+            &lt;th class=&quot;mui-column-header&quot;&gt;
+                Level 3
+            &lt;/th&gt;
+            &lt;th class=&quot;mui-column-header&quot;&gt;
+                Level 4
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th class=&quot;mui-row-header&quot;&gt;
+                Stephen
+            &lt;/th&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                700
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                900
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                600
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                650
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;mui-detail-row&quot;&gt;
+            &lt;th class=&quot;mui-row-header&quot;&gt;
+                Primary Objective Scores
+            &lt;/th&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                500
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                400
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                500
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                400
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;mui-sub-detail-row&quot;&gt;
+            &lt;th class=&quot;mui-row-header&quot;&gt;
+                Ninjas killed
+            &lt;/th&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                3
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                5
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                10
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                18
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;mui-sub-detail-row&quot;&gt;
+            &lt;th class=&quot;mui-row-header&quot;&gt;
+                Traps avoided
+            &lt;/th&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                20
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                15
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                10
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                12
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;mui-sub-detail-row&quot;&gt;
+            &lt;th class=&quot;mui-row-header&quot;&gt;
+                Geishas charmed
+            &lt;/th&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                8
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                12
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                4
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                2
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;mui-detail-row&quot;&gt;
+            &lt;th class=&quot;mui-row-header&quot;&gt;
+                Secondary Objective Scores
+            &lt;/th&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                200
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                500
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                100
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                250
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;th class=&quot;mui-row-header&quot;&gt;
+                Dylan
+            &lt;/th&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                900
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                1350
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                800
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                950
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;mui-detail-row&quot;&gt;
+            &lt;th class=&quot;mui-row-header&quot;&gt;
+                Primary Objective Scores
+            &lt;/th&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                600
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                650
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                700
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                650
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;mui-detail-row&quot;&gt;
+            &lt;th class=&quot;mui-row-header&quot;&gt;
+                Secondary Objective Scores
+            &lt;/th&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                300
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                700
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                100
+            &lt;/td&gt;
+            &lt;td class=&quot;mui-value-cell&quot;&gt;
+                300
+            &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+
+</div>
+
+</section>
