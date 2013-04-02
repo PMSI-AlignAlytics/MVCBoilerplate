@@ -63,6 +63,19 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Content\css\font-awesome\font\fontawesome-webfont.eot" />
+    <None Include="Content\css\font-awesome\font\fontawesome-webfont.ttf" />
+    <None Include="Content\css\font-awesome\font\fontawesome-webfont.woff" />
+    <None Include="Content\css\font-awesome\font\FontAwesome.otf" />
+    <None Include="Content\css\font-awesome\font\museo_slab_300-webfont.eot" />
+    <None Include="Content\css\font-awesome\font\museo_slab_300-webfont.ttf" />
+    <None Include="Content\css\font-awesome\font\museo_slab_500-webfont.eot" />
+    <None Include="Content\css\font-awesome\font\museo_slab_500-webfont.ttf" />
+    <None Include="Content\css\font-awesome\font\proximanova-sbold-webfont.eot" />
+    <None Include="Content\css\font-awesome\font\proximanova-sbold-webfont.ttf" />
+    <None Include="Content\css\font-awesome\font\proximanova-webfont.eot" />
+    <None Include="Content\css\font-awesome\font\proximanova-webfont.ttf" />
+    <None Include="Content\css\font-awesome\less\font-awesome.less" />
     <None Include="Content\css\mvc.boilerplate\mui-table.less" />
     <None Include="Content\css\mvc.boilerplate\sprites.less" />
     <None Include="Content\css\mvc.boilerplate\variables.less" />
@@ -75,6 +88,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Content\css\font-awesome\font\fontawesome-webfont.svg" />
     <Content Include="Content\img\boilerplate-devguide\bootstrap_logo.png" />
     <Content Include="Content\img\boilerplate-devguide\jquery-ui_logo.png" />
     <Content Include="Content\img\boilerplate-devguide\jquery_logo.png" />
@@ -96,13 +110,16 @@
     <Content Include="Views\DeveloperGuide\_Images.cshtml" />
     <Content Include="Views\DeveloperGuide\_Icons.cshtml" />
     <Content Include="Views\Test\Index.cshtml" />
-    <Content Include="Views\Shared\_Layout_jQueryOnly.cshtml" />
     <Content Include="Views\DeveloperGuide\_Dropdowns.cshtml" />
     <Content Include="Views\DeveloperGuide\_ButtonGroups.cshtml" />
     <Content Include="Views\DeveloperGuide\_Navs.cshtml" />
     <Content Include="Views\DeveloperGuide\_Navbar.cshtml" />
     <Content Include="Views\DeveloperGuide\_BreadcrumbsPagination.cshtml" />
     <Content Include="Views\DeveloperGuide\_LabelsAndBadges.cshtml" />
+    <Content Include="Views\Shared\_GoogleAnalytics.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Navbar.cshtml" />
+    <Content Include="Views\Shared\_SideNavigation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="404.html" />
@@ -1276,7 +1293,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>58796</DevelopmentServerPort>
+          <DevelopmentServerPort>55333</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
